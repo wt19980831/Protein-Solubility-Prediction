@@ -30,28 +30,15 @@ print("test shape" ,test_data.shape)
 print("train model")
 
 from catboost import CatBoostClassifier
-# clf = CatBoostClassifier(learning_rate=0.01,
-#                          iterations=300000,
-#                          depth=9,
-#                          loss_function="Logloss",
-#                          early_stopping_rounds=5000,
-#                          # eval_metric="AUC",
-#                          # eval_metric="MCC",
-#                          eval_metric="Accuracy",
-#                          verbose=2000,
-#                          task_type="GPU",
-#                          devices="0:1"
-#                          )
 
 clf = CatBoostClassifier(loss_function="Logloss",
                            # eval_metric="AUC",
                            eval_metric="Accuracy",
-                           task_type="CPU",
-                           # devices="0",
+                           task_type="GPU",
+                           devices="0",
                            learning_rate=0.01,
                            iterations=70000,
                            l2_leaf_reg=49,
-                           random_seed=432013,
                            od_type="Iter",
                            depth=9,
                            early_stopping_rounds=15000,
