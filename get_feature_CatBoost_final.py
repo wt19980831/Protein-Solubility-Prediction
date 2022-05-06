@@ -352,7 +352,7 @@ def get_features(seq):
     '''
     n = 10                                  # 序列截断长度为 10
     x1 = onehot(seq ,n=n)                   # 200 维度
-    x2 = graph(seq)                         # 60 维
+#     x2 = graph(seq)                         # 60 维
     x3 = kyte(seq)                          # 64 维
     x4 = eiip(seq)                          # 64 维
     x5 = ACC(seq) + ACC2(seq) + ACC3(seq)   # 20 + 64 + 64 = 148 维
@@ -360,8 +360,8 @@ def get_features(seq):
     x7 = sp(seq)                            # 64 维
     x8 = polar(seq ,n=n)                    # 40 维
     x9 = acid(seq ,n=n)                     # 30 维
-    x10 = onehotw(seq ,n=n)                 # 10 维
-    return  x1 + x2 + x3 + x4 + x5 + x6 + x7 + x8 + x9 + x10
+#     x10 = onehotw(seq ,n=n)                 # 10 维
+    return  x1 + x3 + x4 + x5 + x6 + x7 + x8 + x9
 
 
 pool = Pool(cpu_count())
