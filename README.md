@@ -1,6 +1,7 @@
 # Protein Solubility Prediction
 ## Motivation
-The solubility of protein plays an important role in some basic scientific experiments and medical drug research because the degree of solubility can represent the quality of protein functions. A novel and highly accurate solubility predictor that combines the fusion of multiple feature information of proteins and the CatBoost algorithm in the ensemble learning to predict the solubility of proteins.
+Protein drugs can be manufactured through recombinant proteins in the expression system. These drugs have high efficacy, low side effects and clear biological functions that can participate in and inhibit the physiological and biochemical processes of cancer cells in the human body. Protein solubility prediction is important to drug production, research and so on.
+A model named EL-FFsol based on the CatBoost ensemble learning framework and multiple feature fusion of protein sequences is proposed to predict protein solubility.
 ## Installation
 ### Requirements
 * The model could be run in the Python 3.8
